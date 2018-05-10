@@ -19,7 +19,7 @@ This means that different collaborators and forks hosted in different places can
     * Close an issue or pull request (with appropriate permissions)
     * *Other standard git actions, such as merging a branch, may or may not be handled via this server, but aren't described here since they exist in native git*
 3. Supports auth integration with apps like GitHub and BitBucket to enable the following:
-    * Sync issues, pull requests, comments, release notes, etc. (the server node is responsible for this)
+    * Sync issues, pull requests, comments, release notes, etc. (the server node is responsible for this; supplementary apps e.g. for GitHub will be needed to create temporary branches and open pull requests)
     * Facilitate selection of existing repositories to share over hypergit
 4. An Electron app with UI corresponding to everything described above
 5. An easy mechanism for hosting a git repository directly with hypergit rather than using a third-party service.
