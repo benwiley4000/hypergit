@@ -13,13 +13,16 @@ This means that different collaborators and forks hosted in different places can
 1. Source code owners can host [Dat](https://github.com/datproject/dat) nodes which:
     * point to to a git repository available over https or ssh
     * contain a read-only (via Dat) history of issues, pull requests, code reviews, release notes, and other relevant meta information
-2. Each node has an associated HTTPS server which accepts POST requests from users who would like to:
+2. Each node runs a hyperdb feed (https://github.com/mafintosh/hyperdb) which is automatically authorized with write access and propagated across the network. This allows a user to:
     * Create an issue or pull request
     * Comment in an issue or pull request
-    * Close an issue or pull request (with appropriate permissions)
-    * *Other standard git actions, such as merging a branch, may or may not be handled via this server, but aren't described here since they exist in native git*
-3. Supports auth integration with apps like GitHub and BitBucket to enable the following:
+    * Close an issue or pull request (with appropriate permissions, which are audited by other nodes in the network)
+    * Remove a comment (with appropriate permissions)
+    * Modify a user profile (with appropriate permissions)
+    * Associate a user identity across multiple Dat nodes (by sending an identity confirmation request to another Dat address, and confirming on the other end)
+3. Git action permissions are not handled by the Dat repository - they are handled by the repository itself. However there should be some way of associating a user account with git permissions in order to display relevant options (e.g. Merge Pull Request) in the UI.
+4. Supports auth integration with apps like GitHub and BitBucket to enable the following:
     * Sync issues, pull requests, comments, release notes, etc. (the server node is responsible for this; supplementary apps e.g. for GitHub will be needed to create temporary branches and open pull requests)
     * Facilitate selection of existing repositories to share over hypergit
-4. An Electron app with UI corresponding to everything described above
-5. An easy mechanism for hosting a git repository directly with hypergit rather than using a third-party service.
+5. An Electron app with UI corresponding to everything described above
+6. An easy mechanism for hosting a git repository directly with hypergit rather than using a third-party service.
