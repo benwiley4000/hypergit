@@ -9,6 +9,8 @@ The defining difference is that forks and merge requests (a.k.a. pull requests) 
 
 This means that different collaborators and forks hosted in different places can communicate with the ease of a conventional centralized service.
 
+**Eventually, one option for hosting the git repository itself will be using Dat to share repository changes peer-to-peer!** However the initial goal is to sync discussions and pull requests peer-to-peer.
+
 # TODO
 
 The bullet points below might be sort of outdated; see [ARCHITECTURE.md](ARCHITECTURE.md) for a more formal description of the planned spec.
