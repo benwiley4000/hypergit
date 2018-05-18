@@ -10,6 +10,9 @@ The defining difference is that forks and merge requests (a.k.a. pull requests) 
 This means that different collaborators and forks hosted in different places can communicate with the ease of a conventional centralized service.
 
 # TODO
+
+The bullet points below might be sort of outdated; see [ARCHITECTURE.md](ARCHITECTURE.md) for a more formal description of the planned spec.
+
 1. Source code owners can host [Dat](https://github.com/datproject/dat) nodes which:
     * point to to a git repository available over https or ssh
     * contain a read-only (via Dat) history of issues, pull requests, code reviews, release notes, and other relevant meta information
