@@ -2,6 +2,8 @@
 
 This document describes the data model of hypergit and the enforcement of user permissions. The current layout is heavily influenced by GitHub, though everything is debatable and may be adjusted in future iterations.
 
+*Note: does not describe how the git repo itself is hosted, although there is a relevant discussion about this [here](https://github.com/isomorphic-git/isomorphic-git/issues/97#issuecomment-389642150) which may be incorporated.*
+
 ### *Everything below is speculative since nothing has been implemented yet!* 😀
 
 ## data model
